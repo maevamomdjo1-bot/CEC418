@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Dashboard</title>
+  <link rel="stylesheet" href="../css/dashboard-v.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div data-include="../compoments/sidebar.html"></div>
+  
+  <div class="main">
+    <div data-include="../compoments/navbad.html"></div>
+
+    <div class="dashboard-container">
+      <div class="page-header">
+        <h1 data-i18n="dashboard.title">Mon Tableau de Bord</h1>
+        <p data-i18n="dashboard.subtitle">Gérez vos commandes et découvrez nos produits recommandés</p>
+      </div>
+
+      <div class="dashboard-section">
+        <div class="section-header">
+          <h2 data-i18n="dashboard.myOrders"><i class="fa fa-shopping-bag"></i> Mes Commandes</h2>
+          <span class="badge" id="orderCount">0</span>
+        </div>
+        <div id="ordersContainer">
+          <table class="orders-table" id="ordersTable">
+            <thead>
+              <tr>
+                <th data-i18n="table.image">Image</th>
+                <th data-i18n="table.products">Produits</th>
+                <th data-i18n="table.quantity">Quantité</th>
+                <th data-i18n="table.total">Total</th>
+                <th data-i18n="table.status">Statut</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <p id="noOrders" style="display:none;text-align:center;color:var(--text-muted);padding:30px;" data-i18n="dashboard.noOrders">Vous n'avez pas encore de commandes.</p>
+        </div>
+      </div>
+
+      <div class="dashboard-section">
+        <div class="section-header">
+          <h2 data-i18n="dashboard.recommended"><i class="fa fa-star"></i> Produits Recommandés</h2>
+        </div>
+        <div class="products-grid" id="recommended"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/i18n-loader.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/imageUtils.js"></script>
+  <script src="../js/include.js"></script>
+  <script src="../js/client-dashboard.js"></script>
+</body>
+</html>
+

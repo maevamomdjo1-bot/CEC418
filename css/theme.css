@@ -1,0 +1,93 @@
+/* Theme variables for SmartShop */
+:root{
+  --bg:#f8f9fa;
+  --card-bg:#ffffff;
+  --bg-secondary:#f1f5f9;
+  --sidebar-bg:#ffffff;
+  --sidebar-text:#1f2937;
+  --text-primary:#0f172a;
+  --text-secondary:#475569;
+  --text-muted:#94a3b8;
+  --primary:#2563eb;
+  --primary-2:#667eea;
+  --secondary:#764ba2;
+  --primary-grad:linear-gradient(135deg,var(--primary-2),var(--secondary));
+  --muted:#6b7280;
+  --success:#16a34a;
+  --danger:#ef4444;
+  --shadow:0 20px 50px rgba(15,23,42,0.06);
+}
+
+/* Utility classes */
+.bg-card{ background:var(--card-bg); }
+.text-muted{ color:var(--text-muted); }
+.btn-primary{ background:var(--primary); color:#fff; }
+.btn-success{ background:var(--success); color:#fff; }
+.btn-danger{ background:var(--danger); color:#fff; }
+
+/* Sidebar / Navbar */
+.sidebar{
+  width:260px;
+  height:100vh;
+  padding:24px;
+  border-right:1px solid rgba(15,23,42,0.06);
+  box-shadow:0 20px 50px rgba(15,23,42,0.04);
+  position:fixed;
+  left:0;
+  top:0;
+  overflow:auto;
+  background:var(--card-bg);
+}
+
+.sidebar-header h2{ margin:0 0 28px 0; font-size:1.3rem; font-weight:700; color:var(--text-primary); }
+
+.sidebar-list{ list-style:none; padding:0; margin:0; }
+.sidebar-item{ margin:6px 0; }
+.sidebar-item a{ display:flex; gap:14px; align-items:center; padding:14px 16px; border-radius:14px; color:var(--text-secondary); text-decoration:none; transition:all 0.2s ease; }
+.sidebar-item a i{ width:20px; text-align:center; color:var(--primary); }
+.sidebar-item a:hover{ background:rgba(37,99,235,0.08); color:var(--text-primary); }
+.sidebar-item a.active{ background:rgba(37,99,235,0.12); color:var(--primary); font-weight:600; }
+.sidebar-item a.logout-link{ color:var(--danger); }
+.sidebar-item a.logout-link:hover{ background:rgba(239,68,68,0.08); }
+
+.cart-count{ background:var(--danger); color:white; border-radius:999px; padding:4px 8px; font-size:0.75rem; margin-left:6px; font-weight:600; }
+
+.navbar{ 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  padding:14px 28px; 
+  margin-left:260px; 
+  border-bottom:1px solid rgba(15,23,42,0.06); 
+  box-shadow:0 20px 50px rgba(15,23,42,0.04);
+  position:sticky; 
+  top:0; 
+  z-index:30;
+  background:var(--card-bg);
+}
+
+.nav-left{ display:flex; align-items:center; gap:18px; }
+.sidebar-toggle{ background:transparent; border:none; font-size:1.2rem; padding:8px; cursor:pointer; color:var(--text-primary); }
+.nav-brand{ display:flex; flex-direction:column; gap:4px; }
+.brand{ font-size:1.2rem; margin:0; font-weight:700; color:var(--text-primary);} 
+.greeting{ margin:0; font-size:0.9rem; color:var(--text-secondary); }
+
+.nav-right{ display:flex; align-items:center; gap:18px; }
+.search-box{ display:flex; align-items:center; gap:10px; background:var(--bg-secondary); padding:10px 14px; border-radius:12px; }
+.search-box i{ color:var(--text-muted); }
+.search-box input{ border:none; background:transparent; outline:none; color:var(--text-primary); font-size:0.95rem; }
+.search-box input::placeholder{ color:var(--text-muted); }
+.notification{ position:relative; color:var(--text-primary); cursor:pointer; }
+.notif-count{ background:var(--danger); color:white; border-radius:999px; padding:2px 6px; font-size:0.7rem; margin-left:4px; font-weight:600; }
+.profile img{ width:42px; height:42px; object-fit:cover; border-radius:999px; box-shadow:0 4px 12px rgba(15,23,42,0.08); }
+
+/* helpers when sidebar hidden */
+.sidebar.collapsed{ left:-320px; }
+.navbar.shifted{ margin-left:80px; }
+
+/* responsive */
+@media (max-width: 900px){ 
+  .sidebar{ left:-320px; } 
+  .navbar{ margin-left:0; } 
+}
+

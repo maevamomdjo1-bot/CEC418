@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <div data-include="../compoments/sidebar.html"></div>
+
+  <!-- Main -->
+  <div class="main">
+    <div data-include="../compoments/navbad.html"></div>
+
+    <div class="cart-container">
+      <div class="cart-header">
+        <div>
+          <p class="cart-label" data-i18n="nav.cart">Panier</p>
+          <h1 data-i18n="cart.title">Votre commande</h1>
+          <p class="cart-note" data-i18n="cart.subtitle">Vérifiez vos articles, modifiez les quantités et passez à la caisse en toute simplicité.</p>
+        </div>
+        <a href="products.html" class="button button-secondary" data-i18n="cart.continueShopping">Continuer mes achats</a>
+      </div>
+
+      <div class="cart-grid">
+        <section class="cart-items-area">
+          <div class="section-title">
+            <h2 data-i18n="cart.items">Articles du panier</h2>
+            <span class="item-count" id="itemCount" data-i18n="cart.items">0 articles</span>
+          </div>
+          <div class="cart-items"></div>
+        </section>
+
+        <aside class="cart-summary">
+          <h2 data-i18n="cart.summary">Résumé de la commande</h2>
+          <div class="summary-card">
+            <div class="summary-row">
+              <span data-i18n="cart.subtotal">Sous-total</span>
+              <strong id="subtotal">$0.00</strong>
+            </div>
+            <div class="summary-row">
+              <span data-i18n="cart.shipping">Livraison</span>
+              <strong>Gratuite</strong>
+            </div>
+            <div class="summary-row total-row">
+              <span data-i18n="cart.total">Total</span>
+              <strong id="total">$0.00</strong>
+            </div>
+          </div>
+          <button class="checkout-btn" data-i18n="cart.checkout">Passer à la caisse</button>
+          <p class="summary-note">Vous pouvez modifier la quantité ou supprimer un article avant de finaliser votre commande.</p>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/i18n-loader.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/imageUtils.js"></script>
+  <script src="../js/include.js"></script>
+  <script src="../js/cart.js"></script>
+</body>
+
+</html>

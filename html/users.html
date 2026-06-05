@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>Users - SmartShop</title>
+
+  <!-- CSS -->
+
+  <link rel="stylesheet"
+  href="../css/users.css">
+
+  <!-- Font Awesome -->
+
+  <link
+  rel="stylesheet"
+
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+</head>
+
+<body>
+
+<!-- SIDEBAR (included) -->
+
+<div data-include="../compoments/sidebar.html"></div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+  <!-- NAVBAR -->
+
+  <div class="navbar">
+
+    <div>
+
+      <h1>Customers</h1>
+
+      <p>
+        Manage all customers
+      </p>
+
+    </div>
+
+    <div class="nav-right">
+
+      <div class="search-box">
+
+        <i class="fa fa-search"></i>
+
+        <input
+        type="text"
+        placeholder="Search users...">
+
+      </div>
+
+      <button class="add-user-btn">
+
+        <i class="fa fa-plus"></i>
+
+        Add User
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- USER STATS -->
+
+  <div class="cards">
+
+    <div class="card">
+
+      <h3>Total Users</h3>
+
+      <p>1,250</p>
+
+      <i class="fa fa-users"></i>
+
+    </div>
+
+    <div class="card">
+
+      <h3>Active Users</h3>
+
+      <p>980</p>
+
+      <i class="fa fa-user-check"></i>
+
+    </div>
+
+    <div class="card">
+
+      <h3>New Users</h3>
+
+      <p>75</p>
+
+      <i class="fa fa-user-plus"></i>
+
+    </div>
+
+  </div>
+
+  <!-- USERS TABLE -->
+
+  <div class="table-container">
+
+    <div class="table-header">
+
+      <h2>All Customers</h2>
+
+    </div>
+
+    <table>
+
+      <thead>
+
+        <tr>
+
+          <th>User</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Status</th>
+          <th>Action</th>
+
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr>
+
+          <td class="user-info">
+
+            <img
+            src="https://i.pravatar.cc/150?img=1">
+
+            <span>John Doe</span>
+
+          </td>
+
+          <td>john@gmail.com</td>
+
+          <td>+1 202 456 789</td>
+
+          <td>
+
+            <span class="status active">
+
+              Active
+
+            </span>
+
+          </td>
+
+          <td>
+
+            <button class="view-btn">
+
+              View
+
+            </button>
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td class="user-info">
+
+            <img
+            src="https://i.pravatar.cc/150?img=5">
+
+            <span>Sarah Smith</span>
+
+          </td>
+
+          <td>sarah@gmail.com</td>
+
+          <td>+1 876 564 908</td>
+
+          <td>
+
+            <span class="status pending">
+
+              Pending
+
+            </span>
+
+          </td>
+
+          <td>
+
+            <button class="view-btn">
+
+              View
+
+            </button>
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td class="user-info">
+
+            <img
+            src="https://i.pravatar.cc/150?img=8">
+
+            <span>Michael Lee</span>
+
+          </td>
+
+          <td>michael@gmail.com</td>
+
+          <td>+1 546 987 654</td>
+
+          <td>
+
+            <span class="status active">
+
+              Active
+
+            </span>
+
+          </td>
+
+          <td>
+
+            <button class="view-btn">
+
+              View
+
+            </button>
+
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/include.js"></script>
+<script src="../js/users.js"></script>
+
+</body>
+</html>

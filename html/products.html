@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Products</title>
+
+  <link rel="stylesheet" href="../css/products.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+</head>
+
+<body>
+
+  <!-- Sidebar (included) -->
+  <div data-include="../compoments/sidebar.html"></div>
+
+  <!-- Main -->
+
+  <div class="main">
+
+    <!-- Navbar -->
+
+    <div class="navbar">
+
+      <h1>Products</h1>
+
+      <input
+        type="text"
+        placeholder="Search product..."
+        id="searchInput"
+      >
+
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid" id="productsGrid">
+      <p style="text-align:center;color:gray;padding:40px;">Loading products...</p>
+    </div>
+
+  </div>
+
+<script src="../js/api.js"></script>
+<script src="../js/imageUtils.js"></script>
+<script src="../js/include.js"></script>
+<script src="../js/products.js"></script>
+
+</body>
+</html>

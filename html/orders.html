@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orders</title>
+  <link rel="stylesheet" href="../css/orders.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <div data-include="../compoments/sidebar.html"></div>
+
+  <div class="main">
+    <div data-include="../compoments/navbad.html"></div>
+
+    <div class="orders-header">
+      <h1>Orders</h1>
+      <div class="filter-btn">
+        <button class="active-filter">All Orders</button>
+        <button>Pending</button>
+        <button>Delivered</button>
+        <button>Cancelled</button>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <div class="table-header">
+        <h2>All Orders</h2>
+        <input type="text" placeholder="Search orders...">
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Products</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Update Status</th>
+          </tr>
+        </thead>
+        <tbody id="ordersTableBody">
+          <tr><td colspan="7" style="text-align:center;padding:20px;color:gray;">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/include.js"></script>
+  <script src="../js/oders.js"></script>
+</body>
+</html>

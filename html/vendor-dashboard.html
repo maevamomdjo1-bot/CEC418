@@ -1,0 +1,133 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartShop Dashboard</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div data-include="../compoments/sidebar.html"></div>
+
+  <div class="main">
+
+    <!-- Navbar -->
+    <div class="navbar">
+      <div>
+        <h1>Dashboard</h1>
+        <p id="dashboardMessage">Welcome back!</p>
+      </div>
+      <div class="nav-right">
+        <div class="search-box">
+          <i class="fa fa-search"></i>
+          <input type="text" placeholder="Search...">
+        </div>
+        <div class="notification">
+          <i class="fa fa-bell"></i>
+          <span>3</span>
+        </div>
+        <div class="profile">
+          <img src="../assets/banner/procat1.jpg" alt="profile">
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="cards">
+      <div class="card sales">
+        <div>
+          <h3>Chiffre d'Affaires</h3>
+          <p id="totalRevenue">1 350 000 CFA</p>
+        </div>
+        <i class="fas fa-coins"></i>
+      </div>
+      <div class="card products">
+        <div>
+          <h3>Mes Produits</h3>
+          <p id="productCount">16</p>
+        </div>
+        <i class="fas fa-box-open"></i>
+      </div>
+      <div class="card orders">
+        <div>
+          <h3>Total Commandes</h3>
+          <p id="orderCount">47</p>
+        </div>
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+      <div class="card customers">
+        <div>
+          <h3>Stock Faible</h3>
+          <p id="lowStock">3</p>
+        </div>
+        <i class="fas fa-exclamation-triangle"></i>
+      </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="quick-actions">
+      <h2>Actions Rapides</h2>
+      <div class="action-cards">
+        <a href="inventory.html" class="action-card">
+          <i class="fas fa-plus"></i>
+          <span>Ajouter Produit</span>
+        </a>
+        <a href="orders.html" class="action-card">
+          <i class="fas fa-list"></i>
+          <span>Voir Commandes</span>
+        </a>
+        <a href="inventory.html" class="action-card">
+          <i class="fas fa-warehouse"></i>
+          <span>Gérer Stock</span>
+        </a>
+        <a href="profile.html" class="action-card">
+          <i class="fas fa-user-cog"></i>
+          <span>Mon Profil</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Recent Orders Table -->
+    <div class="dashboard-grid">
+      <div class="table-container">
+        <div class="table-header">
+          <h2>Commandes Récentes</h2>
+          <a href="orders.html" style="text-decoration:none;">
+            <button><i class="fas fa-eye"></i> Voir Tout</button>
+          </a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID Commande</th>
+              <th>Client</th>
+              <th>Total</th>
+              <th>Status</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="recentOrders">
+            <tr><td colspan="5" style="text-align:center;padding:20px;color:gray;">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-container" id="recentProductsContainer">
+        <div class="table-header">
+          <h2>Produits Récents</h2>
+        </div>
+        <div class="recent-products" id="recentProducts">
+          <p style="text-align:center;color:gray;padding:20px;">Loading products...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/imageUtils.js"></script>
+  <script src="../js/include.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

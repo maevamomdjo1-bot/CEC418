@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>User Profile</title>
+
+  <link rel="stylesheet"
+  href="../css/profile.css">
+
+  <link
+  rel="stylesheet"
+
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+</head>
+
+<body>
+
+  <!-- Sidebar (included) -->
+
+  <div data-include="../compoments/sidebar.html"></div>
+
+  <!-- Main -->
+
+  <div class="main">
+
+    <h1>User Profile</h1>
+
+    <!-- Profile Card -->
+
+    <div class="profile-card">
+
+      <!-- Avatar -->
+
+      <div class="avatar">
+
+        <img
+
+        src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+
+        id="profileImage"
+
+        >
+        <input type="file" id="imageUpload" hidden>
+        
+        <button class="upload-btn" onclick="document
+                .getElementById('imageUpload')
+                  .click()">
+        
+                    Upload Photo
+
+         </button>
+
+      </div>
+
+      <!-- Info -->
+
+      <h2 id="username">
+        Loading...
+      </h2>
+
+      <p id="email">
+        Loading...
+      </p>
+
+      <span class="role">
+        Store Manager
+      </span>
+
+      <!-- Stats -->
+
+      <div class="stats">
+
+        <div>
+          <h3>120</h3>
+          <p>Products</p>
+        </div>
+
+        <div>
+          <h3>340</h3>
+          <p>Orders</p>
+        </div>
+
+        <div>
+          <h3>$12K</h3>
+          <p>Revenue</p>
+        </div>
+
+      </div>
+
+      <!-- Buttons -->
+
+      <button class="edit-btn">
+        Edit Profile
+      </button>
+
+      <button class="logout-btn"
+      onclick="logout()">
+
+        Logout
+
+      </button>
+
+    </div>
+
+  </div>
+
+<script src="../js/api.js"></script>
+<script src="../js/include.js"></script>
+<script src="../js/profile.js"></script>
+
+</body>
+</html>

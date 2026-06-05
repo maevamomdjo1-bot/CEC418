@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paramètres</title>
+  <link rel="stylesheet" href="../css/settings.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div data-include="../compoments/sidebar.html"></div>
+  
+  <div class="main">
+    <div data-include="../compoments/navbad.html"></div>
+
+    <div class="dashboard-container">
+      <div class="page-header">
+        <h1 data-i18n="settings.title">Paramètres</h1>
+        <p data-i18n="settings.subtitle">Gérez vos préférences et informations personnelles</p>
+      </div>
+
+      <!-- Profile Settings -->
+      <div class="dashboard-section">
+        <div class="section-header">
+          <h2 data-i18n="settings.profile"><i class="fa fa-user"></i> Profil</h2>
+        </div>
+        <div class="settings-form">
+          <div class="form-group">
+            <label for="fullName" data-i18n="form.fullName">Nom Complet</label>
+            <input type="text" id="fullName" class="form-input" data-i18n="form.fullName" placeholder="Votre nom">
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="form.email">Email</label>
+            <input type="email" id="email" class="form-input" data-i18n="form.email" placeholder="votre@email.com" disabled>
+          </div>
+          <div class="form-group">
+            <label for="phone" data-i18n="form.phone">Téléphone</label>
+            <input type="tel" id="phone" class="form-input" data-i18n="form.phone" placeholder="+33 6 12 34 56 78">
+          </div>
+          <div class="form-group">
+            <label for="address" data-i18n="form.address">Adresse</label>
+            <input type="text" id="address" class="form-input" data-i18n="form.address" placeholder="123 Rue de la Paix">
+          </div>
+          <div class="form-group">
+            <label for="city" data-i18n="form.city">Ville</label>
+            <input type="text" id="city" class="form-input" data-i18n="form.city" placeholder="Paris">
+          </div>
+          <div class="form-group">
+            <label for="zipcode" data-i18n="form.zipcode">Code Postal</label>
+            <input type="text" id="zipcode" class="form-input" data-i18n="form.zipcode" placeholder="75001">
+          </div>
+          <button id="saveProfil" class="btn-primary" data-i18n="form.saveProfile">Enregistrer le Profil</button>
+        </div>
+      </div>
+
+      <!-- Security Settings -->
+      <div class="dashboard-section">
+        <div class="section-header">
+          <h2 data-i18n="settings.security"><i class="fa fa-lock"></i> Sécurité</h2>
+        </div>
+        <div class="settings-form">
+          <div class="form-group">
+            <label for="currentPassword" data-i18n="form.currentPassword">Mot de passe actuel</label>
+            <input type="password" id="currentPassword" class="form-input" data-i18n="form.currentPassword" placeholder="••••••••">
+          </div>
+          <div class="form-group">
+            <label for="newPassword" data-i18n="form.newPassword">Nouveau mot de passe</label>
+            <input type="password" id="newPassword" class="form-input" data-i18n="form.newPassword" placeholder="••••••••">
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword" data-i18n="form.confirmPassword">Confirmer le mot de passe</label>
+            <input type="password" id="confirmPassword" class="form-input" data-i18n="form.confirmPassword" placeholder="••••••••">
+          </div>
+          <button id="changePassword" class="btn-primary" data-i18n="form.changePassword">Changer le mot de passe</button>
+        </div>
+      </div>
+
+      <!-- Preferences -->
+      <div class="dashboard-section">
+        <div class="section-header">
+          <h2 data-i18n="settings.preferences"><i class="fa fa-sliders"></i> Préférences</h2>
+        </div>
+        <div class="settings-form">
+          <div class="form-group">
+            <label for="language" data-i18n="form.language">Langue</label>
+            <select id="language" class="form-input">
+              <option value="fr">Français</option>
+              <option value="en">English</option>
+              <option value="es">Español</option>
+            </select>
+          </div>
+          <div class="form-group checkbox-group">
+            <label>
+              <input type="checkbox" id="emailNotifications" checked>
+              <span data-i18n="form.emailNotifications">Recevoir les notifications par email</span>
+            </label>
+          </div>
+          <div class="form-group checkbox-group">
+            <label>
+              <input type="checkbox" id="orderUpdates" checked>
+              <span data-i18n="form.orderUpdates">Notifications de mise à jour des commandes</span>
+            </label>
+          </div>
+          <div class="form-group checkbox-group">
+            <label>
+              <input type="checkbox" id="newsletter">
+              <span data-i18n="form.newsletter">S'abonner à la newsletter</span>
+            </label>
+          </div>
+          <button id="savePreferences" class="btn-primary" data-i18n="form.savePreferences">Enregistrer les Préférences</button>
+        </div>
+      </div>
+
+      <!-- Shipping Addresses -->
+      <div class="dashboard-section">
+        <div class="section-header">
+          <h2 data-i18n="settings.addresses"><i class="fa fa-map-location-dot"></i> Adresses de Livraison</h2>
+          <button id="addAddress" class="btn-secondary" data-i18n="form.addAddress"><i class="fa fa-plus"></i> Ajouter</button>
+        </div>
+        <div id="addressesList" class="addresses-grid"></div>
+      </div>
+
+      <!-- Danger Zone -->
+      <div class="dashboard-section danger-zone">
+        <div class="section-header">
+          <h2 data-i18n="settings.dangerZone"><i class="fa fa-triangle-exclamation"></i> Zone de Danger</h2>
+        </div>
+        <div class="settings-form">
+          <p class="danger-text" data-i18n="danger.warning">Ces actions sont irréversibles. Soyez prudent.</p>
+          <button id="deleteAccount" class="btn-danger" data-i18n="danger.deleteAccount">Supprimer le Compte</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/i18n-loader.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/imageUtils.js"></script>
+  <script src="../js/include.js"></script>
+  <script src="../js/settings.js"></script>
+</body>
+</html>
