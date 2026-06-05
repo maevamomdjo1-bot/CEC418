@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'http://https://cec-418-3tkp.vercel.app/api';
 
 const api = {
   getToken: () => localStorage.getItem('kometa_token'),
